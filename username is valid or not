@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class CompareStrings {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String s1 = input.nextLine();
+
+        System.out.print("Enter the second string: ");
+        String s2 = input.nextLine();
+
+        // Use equals() to compare the content of the strings
+        if (s1.equals(s2)) {
+            System.out.println("User name valid");
+        } else {
+            System.out.println("User name invalid");
+        }
+    }
+}
