@@ -1,0 +1,29 @@
+import java.util.Iterator;
+import java.util.TreeSet;
+class TreeSetExample {
+
+    public static void main(String[] args) {
+        TreeSet<String> treeSet = new TreeSet<>();
+        treeSet.add("Apple");
+        treeSet.add("Mango");
+        treeSet.add("Orange");
+        treeSet.add("Banana");
+        System.out.println("Elements in the TreeSet:");
+        Iterator<String> itr = treeSet.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        treeSet.add("Grapes");
+        System.out.println("\nAfter adding 'Grapes':");
+        itr = treeSet.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        treeSet.remove("Mango");
+        System.out.println("\nAfter removing 'Mango':");
+        itr = treeSet.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+    }
+}

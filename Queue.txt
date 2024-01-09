@@ -1,0 +1,26 @@
+import java.util.LinkedList;
+import java.util.Queue;
+class QueueExample {
+
+    public static void main(String[] args) {
+        Queue<String> queue = new LinkedList<>();
+        queue.offer("Apple");
+        queue.offer("Mango");
+        queue.offer("Orange");
+        queue.offer("Banana");
+        System.out.println("Elements in the Queue:");
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
+        queue.offer("Grapes");
+        System.out.println("\nAfter adding 'Grapes':");
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
+        queue.remove("Mango");
+        System.out.println("\nAfter attempting to remove 'Mango':");
+        while (!queue.isEmpty()) {
+            System.out.println(queue.poll());
+        }
+    }
+}

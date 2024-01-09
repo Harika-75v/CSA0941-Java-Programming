@@ -1,0 +1,29 @@
+import java.util.HashSet;
+import java.util.Iterator;
+class HashSetExample {
+
+    public static void main(String[] args) {
+        HashSet<String> hashSet = new HashSet<>();
+        hashSet.add("Apple");
+        hashSet.add("Mango");
+        hashSet.add("Orange");
+        hashSet.add("Banana");
+        System.out.println("Elements in the HashSet:");
+        Iterator<String> itr = hashSet.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        hashSet.add("Grapes");
+        System.out.println("\nAfter adding 'Grapes':");
+        itr = hashSet.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+        hashSet.remove("Mango");
+        System.out.println("\nAfter removing 'Mango':");
+        itr = hashSet.iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+    }
+}

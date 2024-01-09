@@ -1,0 +1,25 @@
+import java.util.Stack;
+class StackExample {
+
+    public static void main(String[] args) {
+        Stack<String> stack = new Stack<>();
+        stack.push("Apple");
+        stack.push("Mango");
+        stack.push("Orange");
+        stack.push("Banana");
+        System.out.println("Elements in the Stack:");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+        stack.push("Grapes");
+        System.out.println("\nAfter adding 'Grapes':");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+        stack.remove("Mango");
+        System.out.println("\nAfter attempting to remove 'Mango':");
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
+        }
+    }
+}
